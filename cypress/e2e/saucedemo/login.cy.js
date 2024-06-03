@@ -1,14 +1,12 @@
 describe('Login to Swag Labs', () => {
-    const BASE_URL = 'https://www.saucedemo.com/';
-
     beforeEach(() => {
         // Intercept and stub XHR requests to events.backtrace.io
         cy.intercept('POST', 'https://events.backtrace.io/api/**', {});
-        cy.visit(BASE_URL);
+        cy.visit('/');
     });
 
     it('Validate landing URL and page title', () => {
-        cy.url().should('eq',BASE_URL);
+        cy.url().should('eq','/');
         cy.title().should('eq', 'Swag Labs');
     });
     
