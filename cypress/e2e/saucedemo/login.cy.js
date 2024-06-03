@@ -1,16 +1,18 @@
 describe('Login to Swag Labs', () => {
+    const BASE_URL = 'https://www.saucedemo.com/';
+
     beforeEach(() => {
         // Intercept and stub XHR requests to events.backtrace.io
         cy.intercept('POST', 'https://events.backtrace.io/api/**', {});
+        cy.visit(BASE_URL);
     });
+
     it('Validate landing URL and page title', () => {
-        cy.visit('https://www.saucedemo.com/');
-        cy.url().should('eq','https://www.saucedemo.com/');
+        cy.url().should('eq',BASE_URL);
         cy.title().should('eq', 'Swag Labs');
     });
     
     it('Validate a user can log into the page with valid credentials', () => {
-        cy.visit('https://www.saucedemo.com/');
         cy.get('[data-test="username"]').type('standard_user');
         cy.get('[data-test="password"]').type('secret_sauce');
         cy.get('[data-test="login-button"]').click();
@@ -19,7 +21,6 @@ describe('Login to Swag Labs', () => {
     });
 
     it('Validate a user can not log into the page with invalid credentials', () => {
-        cy.visit('https://www.saucedemo.com/');
         cy.get('[data-test="username"]').type('invalid_user');
         cy.get('[data-test="password"]').type('invalid_password');
         cy.get('[data-test="login-button"]').click();
