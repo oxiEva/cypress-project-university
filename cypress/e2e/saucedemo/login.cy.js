@@ -6,7 +6,7 @@ describe('Login to Swag Labs', () => {
     });
 
     it('Validate landing URL and page title', () => {
-        cy.url().should('eq','/');
+        cy.url().should('eq','https://www.saucedemo.com/');
         cy.title().should('eq', 'Swag Labs');
     });
     
