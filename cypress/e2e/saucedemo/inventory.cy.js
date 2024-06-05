@@ -7,9 +7,7 @@ describe('Inventory in Swag Labs', () => {
         cy.fixture('userCredentials').then(credentials => {
             this.credentials = credentials;
 
-            cy.get('[data-test="username"]').type(this.credentials.standardUser);
-            cy.get('[data-test="password"]').type(this.credentials.password);
-            cy.get('[data-test="login-button"]').click();
+            cy.login(this.credentials.standardUser, this.credentials.password);
         })
         
     });
