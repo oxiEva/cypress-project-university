@@ -5,7 +5,7 @@ This repository contains the final exercise for the course QA & Testing from Hib
 🌳 Cypress
 ---
 
-This project uses [Cypress](https://www.cypress.io/) for end-to-end testing. We are working with [Saude demo](https://www.saucedemo.com//)
+This project uses [Cypress](https://www.cypress.io/) for end-to-end testing. We are working with [Sauce demo](https://www.saucedemo.com//)
 
 ## Getting Started
 
@@ -21,7 +21,7 @@ npx cypress open
 ✅ How I run the tests?
 ---
 
-All tests (tutorials included): 
+All tests: 
 ```sh
 npx cypress run
 ```
