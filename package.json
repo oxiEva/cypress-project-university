@@ -4,12 +4,18 @@
   "description": "My first cypress project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e:all": "cypress run --browser chrome --spec cypress/e2e/saucedemo/",
+    "e2e:login": "cypress run --browser chrome --spec cypress/e2e/saucedemo/login.cy.js",
+    "e2e:inventory": "cypress run --browser chrome --spec cypress/e2e/saucedemo/inventory.cy.js"
   },
   "keywords": [
     "cypress",
     "automation"
   ],
   "author": "me",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.10.0"
+  }
 }
