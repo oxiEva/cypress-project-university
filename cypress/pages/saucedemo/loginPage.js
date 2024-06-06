@@ -7,10 +7,12 @@ class LoginPage {
 
     typeUsername(username) {
         username && this.elements.usernameInput().type(username);
+        return this;
     }
     
     typePassword(password) {
         password && this.elements.passwordInput().type(password);
+        return this;
     }
 
     clickLogin() {
