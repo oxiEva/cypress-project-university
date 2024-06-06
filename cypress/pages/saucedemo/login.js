@@ -6,11 +6,11 @@ class LoginPage {
     }
 
     typeUsername(username) {
-        this.elements.usernameInput().type(username);
+        username && this.elements.usernameInput().type(username);
     }
-
+    
     typePassword(password) {
-        this.elements.passwordInput().type(password);
+        password && this.elements.passwordInput().type(password);
     }
 
     clickLogin() {
@@ -18,12 +18,8 @@ class LoginPage {
     }
 
     login(username, password) {
-        if (username) {
-            this.typeUsername(username);
-        }
-        if (password) {
-            this.typePassword(password);
-        }
+        this.typeUsername(username);
+        this.typePassword(password);
         this.clickLogin();
     }
 }
