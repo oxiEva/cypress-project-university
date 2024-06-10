@@ -1,4 +1,4 @@
-class StorePage {
+class InventoryPage {
     elements = {
         title: () => cy.get('.app_logo'),
         inventoryItems: () => cy.get('[data-test="inventory-item"]'),
@@ -53,4 +53,4 @@ class StorePage {
     }
 }
 
-module.exports = new StorePage();
+module.exports = new InventoryPage();
