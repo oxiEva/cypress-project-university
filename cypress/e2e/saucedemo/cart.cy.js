@@ -1,4 +1,4 @@
-import CartPage, { cartItems } from "../../pages/saucedemo/CartPage"
+import CartPage from "../../pages/saucedemo/CartPage"
 import LoginPage from "../../pages/saucedemo/LoginPage"
 import InventoryPage from "../../pages/saucedemo/InventoryPage"
 

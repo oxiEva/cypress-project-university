@@ -8,7 +8,7 @@ describe('Login to Swag Labs', () => {
         cy.fixture('userCredentials').then(credentials => {
             this.credentials = credentials;
         })
-        cy.fixture('loginErrorMessages').as('errorMessages')
+        cy.fixture('errorMessages').as('errorMessages')
     });
 
     it('Validate landing URL and page title', () => {
