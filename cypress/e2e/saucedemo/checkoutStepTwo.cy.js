@@ -31,6 +31,20 @@ describe('Checkout Step two Page', () => {
         CheckoutStepTwoPage.getSectionTitle().should('have.text', 'Checkout: Overview');
     });
 
+    it('Validate the total price is the sum of item prices and taxes', function() {
+        let itemPricesSum = 0;
+
+        CheckoutStepTwoPage.getItemPrices().then(prices => {
+            itemPricesSum = prices.reduce((a, b) => a + b, 0);
+                CheckoutStepTwoPage.getTax().then(tax => {
+                CheckoutStepTwoPage.getTotal().then(total => {
+                    const expectedTotal = itemPricesSum + tax;
+                    expect(total).to.eq(expectedTotal);
+                });
+            });
+        });
+    });
+
     it('Clicking the "Cancel" button redirects to the inventory page', () => {
         CheckoutStepTwoPage.cancelButton().click();
         cy.url().should('include', '/inventory.html');
