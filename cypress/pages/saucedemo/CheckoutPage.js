@@ -36,14 +36,6 @@ class CheckoutPage {
         return this.elements.cancelButton();
     }
 
-    clickContinueButton() {
-        this.continueButton.click();
-    }
-
-    clickCancelButton() {
-        this.cancelButton.click();
-    }
-
     fillOutForm(userData) {
         this.typeFirstNameInput(userData.firstName);
         this.typeLastNameInput(userData.lastName);
