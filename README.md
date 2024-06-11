@@ -38,3 +38,34 @@ Inventory:
 npm run e2e:inventory
 ```
 
+📄 Reporting
+---
+
+When we run 
+```sh
+npx cypress run
+```
+
+We get this output in our console
+![Runned tests ](./cypress/resources/consoleTests.png)
+
+Also we generated a report with **Mochawesome** in reports/html that looks like this:
+![Mochawesome ](./cypress/resources/mochawesome.png)
+
+If we want an Allure report, we can throw the command 
+
+```sh
+npx allure serve allure-results/
+```
+and we'll get this report:
+![Allure report](./cypress/resources/AllureReport.png)
+
+We can see more details when a test failed
+![Allure failed](./cypress/resources/allureFailedTest.png)
+
+🔍 To improve
+---
+
+- Many more tests, especially in the cart page
+- Separate some common components in each page, like the hamburger menu, the footer
+- Write tests with metadata or runtime API for improving Allure Report
