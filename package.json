@@ -16,6 +16,9 @@
   "author": "me",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.10.0"
+    "allure-commandline": "^2.29.0",
+    "allure-cypress": "^3.0.0-beta.3",
+    "cypress": "^13.10.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
